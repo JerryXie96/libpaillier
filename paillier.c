@@ -195,6 +195,14 @@ paillier_exp( paillier_pubkey_t* pub,
 	mpz_powm(res->c, ct->c, pt->m, pub->n_squared);
 }
 
+void
+paillier_inv( paillier_pubkey_t* pub,
+ 							paillier_ciphertext_t* res,
+ 							paillier_ciphertext_t* ct )
+{
+	mpz_invert(res->c, ct->c, pub->n_squared);
+}
+
 paillier_plaintext_t*
 paillier_plaintext_from_ui( unsigned long int x )
 {

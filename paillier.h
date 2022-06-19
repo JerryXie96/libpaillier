@@ -166,6 +166,14 @@ void paillier_exp( paillier_pubkey_t* pub,
 									 paillier_ciphertext_t* ct,
 									 paillier_plaintext_t* pt );
 
+/*
+  Get the inversed ciphertext, i.e., res is the ciphertext of -a if ct is the ciphertext of a. 
+*/
+void
+paillier_inv( paillier_pubkey_t* pub, 	
+									paillier_ciphertext_t* res,
+		 							paillier_ciphertext_t* ct );						 
+
 /****************************
  PLAINTEXT IMPORT AND EXPORT
 ****************************/
